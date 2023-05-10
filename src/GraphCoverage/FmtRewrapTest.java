@@ -25,10 +25,11 @@ public class FmtRewrapTest {
     @Parameterized.Parameters
     public static Collection<Object[]> parameters() {
         return Arrays.asList(new Object[][]{
-                {"T", 2, "\nT"},
+                {"T", 2, "T\n"},
                 {"", 2, "\n"},
+                {" ", 3, " \n"},
                 {"\n\nt", 3, "\n\nt\n"},
-                {"\n", 3, " \n"},
+                {"\n", 3, " \n"}
         });
     }
 
